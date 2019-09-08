@@ -1,0 +1,19 @@
+.circle {
+  border-radius: 50%;
+  height: 200px;
+  width: 200px;
+  background: radial-gradient(at 25% 25%, #FFF, #000 70%, #FFF);
+}
+
+.inverse {
+  transform: rotateX(180deg) translateY(-1px);
+}
+
+.inverse::after {
+  background: radial-gradient(at bottom center, rgba(255,255,255,0) 5%, #FFF 90%);
+  border-radius: 50%;
+  content: '';
+  height: 100%;
+  position: absolute;
+  width: 100%;
+}

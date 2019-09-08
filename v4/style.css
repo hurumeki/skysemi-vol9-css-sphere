@@ -1,0 +1,45 @@
+body {
+  padding: 0;
+  margin: 0;
+}
+
+.wrap {
+  height: 100%;
+  position: absolute;
+  top: 100px;
+  width: 100%;
+}
+
+.circle {
+  border-radius: 50%;
+  height: 200px;
+  width: 200px;
+  background: radial-gradient(at 25% 25%, #FFF, #000 70%, #FFF);
+  position: relative;
+  left: 200px;
+  z-index: 3;
+}
+
+.ground {
+  background: #060606;
+  bottom: 0;
+  opacity: 0.4;
+  position: absolute;
+  top: 170px;
+  width: 100%;
+  z-index: 2;
+}
+
+.inverse {
+  transform: rotateX(180deg) translateY(-1px);
+  z-index: 1;
+}
+
+.inverse::after {
+  background: radial-gradient(at bottom center, rgba(255,255,255,0) 5%, #FFF 90%);
+  border-radius: 50%;
+  content: '';
+  height: 100%;
+  position: absolute;
+  width: 100%;
+}

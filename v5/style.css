@@ -1,0 +1,18 @@
+.circle {
+  border-radius: 50%;
+  height: 200px;
+  width: 200px;
+  background: radial-gradient(at 25% 25%, #FFF, #000 70%, #FFF);
+  position: absolute;
+  z-index: 1;
+}
+
+.shadow {
+  background: radial-gradient(at left bottom, rgba(0,0,0,0.5), rgba(0,0,0,0));
+  border-radius: 50%;
+  height: 200px;
+  position: absolute;
+  transform: rotateX(50deg) skew(-30deg) translate(4px, 1px);
+  transform-origin: bottom center;
+  width: 200px;
+}

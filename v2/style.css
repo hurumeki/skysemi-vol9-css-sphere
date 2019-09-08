@@ -1,0 +1,6 @@
+.circle {
+  border-radius: 50%;
+  height: 200px;
+  width: 200px;
+  background: radial-gradient(at 25% 25%, #FFF, #000);
+}

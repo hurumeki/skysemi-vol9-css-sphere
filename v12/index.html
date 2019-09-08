@@ -1,0 +1,40 @@
+<link rel="stylesheet" href="style.css">
+
+<div id="app"></div>
+
+<script src="https://cdn.jsdelivr.net/npm/vue@2.6.10/dist/vue.min.js"></script>
+<script>
+let N = 24
+let app = new Vue({
+  el: "#app",
+  template: `
+    <div class="sphere">
+        <template v-for="i in ${N}">
+            <div v-for="j in ${N}" class="circle"
+            :style="transform(i,j)"
+            ></div>
+        </template>
+  `,
+  computed: {
+    transform() {
+      return (i, j) => {
+        let color = i % 2 ? 'black' : 'green'
+        return {
+            backgroundColor: color,
+            transform: this.rotateY(i) + ' ' + this.rotateX(j) + ' translateZ(100px)'
+        }
+      }
+    },
+    rotateX() {
+      return (x) => {
+        return `rotateX(${(x) * 360 / N}deg)`
+      }
+    },
+    rotateY() {
+      return (x) => {
+        return `rotateY(${(x) * 360 / N}deg)`
+      }
+    }
+  }
+})
+</script>

@@ -1,0 +1,26 @@
+.sphere {
+  display: block;
+  height: 200px;
+  width: 200px;
+  transform-style: preserve-3d;
+  animation: rotate infinite 36s linear;
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotateY(0deg) rotateX(0deg);
+  }
+  100% {
+    transform: rotateY(360deg) rotateX(360deg);
+  }
+}
+
+.circle {
+  border: 1px solid black;
+  border-radius: 50%;
+  height: 200px;
+  width: 200px;
+  position: absolute;
+  z-index: 1;
+}
+

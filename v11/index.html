@@ -1,0 +1,33 @@
+<link rel="stylesheet" href="style.css">
+
+<div id="app"></div>
+
+<script src="https://cdn.jsdelivr.net/npm/vue@2.6.10/dist/vue.min.js"></script>
+<script>
+
+let app = new Vue({
+  el: "#app",
+  template: `
+    <div class="sphere">
+        <div v-for="i in 180" class="circle" :style="transform(i)"></div>
+    </div>
+  `,
+  computed: {
+    transform() {
+      return (i) => {
+        let color = i % 30 < 15 ? 'black' : 'green'
+        return {
+          background: color,
+          borderColor: color,
+          transform: this.rotateY(i)
+        }
+      }
+    },
+    rotateY() {
+      return (i) => {
+        return `rotateY(${(i) * 180 / 180}deg)`
+      }
+    }
+  }
+})
+</script>

@@ -1,0 +1,78 @@
+.sphere {
+  display: block;
+  height: 200px;
+  width: 200px;
+  transform-style: preserve-3d;
+  animation: rotate infinite 36s linear;
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotateY(0deg) rotateX(0deg);
+  }
+  100% {
+    transform: rotateY(360deg) rotateX(360deg);
+  }
+}
+
+.circle {
+  border: 1px solid black;
+  border-radius: 50%;
+  height: 200px;
+  width: 200px;
+  position: absolute;
+  z-index: 1;
+}
+
+
+.circle:nth-child(2n) {
+  background: green;  
+}
+.circle:nth-child(2n+1) {
+  background: black;  
+}
+
+.circle.deg30 {
+  transform: rotateY(30deg);
+}
+
+.circle.deg60 {
+  transform: rotateY(60deg);
+}
+
+.circle.deg90 {
+  transform: rotateY(90deg);
+}
+
+.circle.deg120 {
+  transform: rotateY(120deg);
+}
+
+.circle.deg150 {
+  transform: rotateY(150deg);
+}
+
+.circle.deg15 {
+  transform: rotateY(15deg);
+}
+
+.circle.deg45 {
+  transform: rotateY(45deg);
+}
+
+.circle.deg75 {
+  transform: rotateY(75deg);
+}
+
+.circle.deg105 {
+  transform: rotateY(105deg);
+}
+
+.circle.deg135 {
+  transform: rotateY(135deg);
+}
+
+.circle.deg165 {
+  transform: rotateY(165deg);
+}
+

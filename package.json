@@ -1,0 +1,11 @@
+{
+  "name": "skysemi-vol9-css-sphere",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "hurumeki <hurumeki1987@gmail.com> (https://github.com/hurumeki/)",
+  "license": "MIT"
+}

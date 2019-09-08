@@ -1,0 +1,89 @@
+body {
+  height: 600px;
+  width: 800px;
+  overflow: hidden;
+  margin: 0;
+  --main-sky-blue: rgb(20,134,227);
+  --main-light-sky-blue: rgb(20,148,255);
+  --main-red: rgba(255,0,0,0.6);
+  --main-orange: rgba(255,128,0,0.6);
+  --main-yellow: rgb(128,128,0,0.6);
+  --main-green: rgb(20,134,227);
+  --main-blue-green: rgba(0,128,128,0.6);
+  --main-blue: rgba(0,0,255,0.6);
+  --main-purple: rgba(0,128,128,0.6);
+}
+
+.back {
+  background: linear-gradient(180deg, var(--main-sky-blue), var(--main-light-sky-blue));
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.bubbles {
+  position: absolute;
+  z-index: 3;
+  width: 800px;
+}
+
+.bubble {
+  position: absolute;
+  z-index: 3;
+  height: 200px;
+  width: 200px;
+}
+
+.bubble .circle {
+  height: 200px;
+  width: 200px;
+  border-radius: 50%;
+  position: absolute;
+  overflow: hidden;
+}
+
+.bg {
+  background: radial-gradient(at 0 0, var(--main-red),var(--main-orange),var(--main-yellow),var(--main-green),var(--main-blue-green),var(--main-blue),var(--main-purple));
+  width: 100%;
+  height: 100%;
+  display: block;
+  position: absolute;
+  z-index: 1;
+}
+
+.sphere {
+  position: relative;
+  width: 99%;
+  height: 99%;
+  z-index: 2;
+  border-radius: 50%;
+  filter: blur(2px);
+  top: 1px;
+  left: 1px;
+}
+
+.highlight {
+  width: 4px;
+  height: 4px;
+  background: rgba(205,205,255,0.9);
+  position: absolute;
+  content: '';
+  display: block;
+  border-radius: 50%;
+  filter: blur(0px);
+  z-index: 20;
+  top: 40px;
+  left: 30px;
+}
+
+.reflect {
+  width: 10px;
+  height: 10px;
+  background: white;
+  position: absolute;
+  content: '';
+  display: block;
+  border-radius: 50%;
+  filter: blur(5px);
+  z-index: 20;
+}
