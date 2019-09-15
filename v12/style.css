@@ -3,7 +3,7 @@
   height: 200px;
   width: 200px;
   transform-style: preserve-3d;
-  /* animation: rotate infinite 36s linear; */
+  animation: rotate infinite 36s linear;
 
   position: absolute;
   top: 100px;
